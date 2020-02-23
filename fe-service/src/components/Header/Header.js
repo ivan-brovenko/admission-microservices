@@ -6,7 +6,7 @@ import LogInLink from "./LogInLink";
 
 @connect(
     state => ({
-        state
+        linkReducer: state.linkToggleReducer
     }),
     dispatch => ({
         dispatch
@@ -18,14 +18,13 @@ class Header extends React.Component {
             <header>
                 <label className="logo">STUD.UA</label>
                 {
-                    (!this.props.state.isRegistration) ? <RegistrationLink/> : ''
-
+                    (!this.props.linkReducer.isRegistration) ? <RegistrationLink/> : ''
                 }
                 {
-                    (!this.props.state.isRegistration) ? <LogInLink/> : ''
+                    (!this.props.linkReducer.isRegistration) ? <LogInLink/> : ''
                 }
                 {
-                    (!this.props.state.isMain) ? <a href="/">MAIN PAGE</a>: ''
+                    (!this.props.linkReducer.isMain) ? <a href="/">MAIN PAGE</a>: ''
                 }
                 <select>
                     <option value="/stud.ua-en">EN</option>

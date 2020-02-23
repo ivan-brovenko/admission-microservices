@@ -18,6 +18,10 @@ import {connect} from "react-redux";
 )
 class MainPage extends React.Component {
 
+    componentDidMount() {
+        this.props.dispatch({type: IS_MAIN})
+    }
+
     render() {
         return (
             <div>
