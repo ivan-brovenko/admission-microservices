@@ -1,15 +1,26 @@
 import React from 'react';
-import './Content.scss';
+import './MainPage.scss';
 import BackgroundImage from '../../images/backbround.jpg';
 import Square1 from '../../images/square1.jpg';
 import Square2 from '../../images/square2.jpg';
 import Square3 from '../../images/square3.jpg';
 import Square4 from '../../images/square4.jpg';
+import {IS_MAIN} from "../../redux/actionNames";
+import {connect} from "react-redux";
 
-class Content extends React.Component {
+@connect(
+    state => ({
+        state
+    }),
+    dispatch => ({
+        dispatch
+    })
+)
+class MainPage extends React.Component {
+
     render() {
         return (
-            <div className="content">
+            <div>
                 <div className="mainImageSection">
                     <img src={BackgroundImage} alt="admission"/>
                     <div className="headline">
@@ -43,4 +54,4 @@ class Content extends React.Component {
     }
 }
 
-export default Content;
+export default MainPage;
