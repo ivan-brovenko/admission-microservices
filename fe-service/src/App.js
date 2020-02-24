@@ -9,6 +9,7 @@ import {createBrowserHistory} from "history";
 import {Provider} from 'react-redux';
 import configureStore from './redux/store';
 import Login from "./components/Login/Login";
+import './App.scss';
 
 class App extends React.Component {
     render() {

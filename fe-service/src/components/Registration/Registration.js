@@ -1,6 +1,5 @@
 import React from 'react';
-import './Registration.scss';
-import {IS_MAIN, IS_REGISTRATION} from "../../redux/actionNames";
+import {IS_REGISTRATION} from "../../redux/actionNames";
 import {connect} from "react-redux";
 
 @connect(

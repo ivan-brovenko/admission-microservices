@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.scss'
+import './Header.scss';
 import {connect} from "react-redux";
 import RegistrationLink from "./RegistrationLink";
 import LogInLink from "./LogInLink";
