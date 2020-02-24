@@ -7,8 +7,7 @@ create table role
 
 create table user
 (
-  user_id       int auto_increment
-    primary key,
+  user_id       int auto_increment primary key,
   user_name     varchar(45) not null,
   user_password varchar(45) not null,
   user_email    varchar(45) not null,

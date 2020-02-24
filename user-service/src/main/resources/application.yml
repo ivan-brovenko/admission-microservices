@@ -1,1 +1,10 @@
-
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa_test?useSSL=false
+    username: root
+    password: root
+  jpd:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      dialect: org.hibernate.dialect.MySQL5Dialect
