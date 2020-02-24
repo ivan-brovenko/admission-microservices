@@ -1,8 +1,9 @@
 import React from 'react';
+import {LOGIN} from "../../../routesConfig";
 
 const LogInLink = () => {
     return (
-        <a>LOG IN</a>
+        <a href={LOGIN}>LOG IN</a>
     );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {MAIN_PAGE, REGISTRATION} from "../routesConfig";
+import {LOGIN, MAIN_PAGE, REGISTRATION} from "../routesConfig";
 import MainPage from "./components/MainPage/MainPage";
 import {Router, Route} from 'react-router-dom';
 import Registration from "./components/Registration/Registration";
@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import {createBrowserHistory} from "history";
 import {Provider} from 'react-redux';
 import configureStore from './redux/store';
+import Login from "./components/Login/Login";
 
 class App extends React.Component {
     render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
                     <Router history={createBrowserHistory()}>
                         <Route exact path={MAIN_PAGE} component={MainPage}/>
                         <Route path={REGISTRATION} component={Registration}/>
+                        <Route path={LOGIN} component={Login}/>
                     </Router>
                     <Footer/>
                 </Provider>

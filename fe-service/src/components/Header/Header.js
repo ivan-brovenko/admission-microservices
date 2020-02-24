@@ -18,13 +18,14 @@ class Header extends React.Component {
             <header>
                 <label className="logo">STUD.UA</label>
                 {
-                    (!this.props.linkReducer.isRegistration) ? <RegistrationLink/> : ''
+                    (!this.props.linkReducer.isRegistration) && (!this.props.linkReducer.isLogIn) ?
+                        <RegistrationLink/> : ''
                 }
                 {
-                    (!this.props.linkReducer.isRegistration) ? <LogInLink/> : ''
+                    (!this.props.linkReducer.isRegistration) && (!this.props.linkReducer.isLogIn) ? <LogInLink/> : ''
                 }
                 {
-                    (!this.props.linkReducer.isMain) ? <a href="/">MAIN PAGE</a>: ''
+                    (!this.props.linkReducer.isMain) ? <a href="/">MAIN PAGE</a> : ''
                 }
                 <select>
                     <option value="/stud.ua-en">EN</option>
